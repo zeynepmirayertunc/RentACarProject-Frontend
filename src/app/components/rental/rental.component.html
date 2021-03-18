@@ -3,7 +3,6 @@
         <tr>
             <th>Id</th>
             <th>İsim</th>
-            <th>Soyisim</th>
             <th>Marka</th>
             <th>Kiralama Tarihi</th>
             <th>Teslim Edilme Tarihi</th>
@@ -11,9 +10,8 @@
     </thead>
 
     <tr *ngFor="let rental of rentals">
-        <td>{{rental.Id}}</td>
-        <td>{{rental.firstName}}</td>
-        <td>{{rental.lastName}}</td>
+        <td>{{rental.id}}</td>
+        <td>{{rental.name}}</td>
         <td>{{rental.brandName}}</td>
         <td>{{rental.rentDate}}</td>
         <td>{{rental.returnDate}}</td>
