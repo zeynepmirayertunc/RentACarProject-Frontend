@@ -1,14 +1,10 @@
-<table class="table table-striped table-hover">
-  <thead>
-      <tr>
-          <th>Renkler</th>
-
-      </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor="let color of colors">
-          <td>{{color.name}}</td>
-      </tr>
-  </tbody>
+<ul class="list-group">
+    <li  [class]="getAllColorClass()" routerLink = "/cars">Renkler</li>
+      <li (click)="setCurrentColor(color)" 
+      *ngFor="let color of colors" 
+      routerLink="/cars/color/{{color.id}}"
+      [class]="getCurrentColorClass(color)">{{color.name}}</li>
+      
+    </ul>
   
-</table>
+    <h5 *ngIf="currentColor"> {{currentColor.name}} seçtiniz</h5>

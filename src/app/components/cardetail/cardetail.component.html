@@ -1,0 +1,64 @@
+
+<div id="carouselExampleControls" 
+  
+   class="carousel slide border border-dark" data-bs-ride="carousel">
+    <div class="carousel-inner">
+       
+      <div class="carousel-item " *ngFor="let image of carImages;  index as i; first as firstImage "  [ngClass]="{ active: firstImage }" >
+        <img src="https://localhost:44390/Images/{{image.imagePath}}" class="d-block w-100" alt="image.imagePath">
+         
+   </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+   <h5>merhaba</h5>
+  </div>  
+ <div class="container">
+  <table class="table">
+    
+    <tbody  *ngFor="let car of cars">
+        
+        <tr> 
+            <th>Id</th>
+            <td>{{car.carId}}</td>
+        </tr>
+        <tr> 
+            <th>Marka</th>
+            <td>{{car.brandName}}</td>
+        </tr>
+
+        <tr> 
+            <th>Model</th>
+            <td>{{car.name}}</td>
+        </tr>
+
+        <tr>
+            <th>Renk</th>
+            <td>{{car.colorName}}</td>
+        </tr>
+
+        <tr>
+            <th>Model Yılı</th>
+            <td>{{car.modelYear}}</td>
+        </tr>
+
+        <tr>
+            <th>Günlük Kiralama Ücreti</th>
+            <td>{{car.dailyPrice}}₺</td>
+        </tr>
+
+        <tr>
+            <th>Açıklama</th>
+            <td>{{car.description}}</td>
+        </tr>
+    
+    </tbody>
+     
+ </table>
+</div> 
